@@ -1,0 +1,28 @@
+# Input data
+prices = [2.50, 1.20, 3.00]
+quantities = [2, 3, 1]
+discount_rate = 10   # percent
+tax_rate = 8         # percent
+
+# Step 1: Calculate subtotal
+subtotal = 0
+for i in range(len(prices)):
+    subtotal += prices[i] * quantities[i]
+
+# Step 2: Calculate discount
+discount = subtotal * (discount_rate / 100)
+
+# Step 3: Apply discount
+discounted_total = subtotal - discount
+
+# Step 4: Calculate tax
+tax = discounted_total * (tax_rate / 100)
+
+# Step 5: Final total cost
+total_cost = discounted_total + tax
+
+# Output
+print("Subtotal:", subtotal)
+print("Discount:", discount)
+print("Tax:", tax)
+print("Total Cost:", total_cost)
