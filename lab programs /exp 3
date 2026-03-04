@@ -1,0 +1,16 @@
+import pandas as pd
+
+sales_data = pd.DataFrame({
+    'Product': ['A', 'B', 'C', 'A', 'B'],
+    'Price': [100, 200, 150, 100, 200],
+    'Quantity': [2, 3, 1, 4, 2]
+})
+
+# Calculate Total Sales
+sales_data['Total Sales'] = sales_data['Price'] * sales_data['Quantity']
+
+print(sales_data)
+
+# Optional: Total sales per product
+total_sales_per_product = sales_data.groupby('Product')['Total Sales'].sum()
+print("\nTotal Sales per Product:\n", total_sales_per_product)
