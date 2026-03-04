@@ -1,0 +1,9 @@
+import numpy as np
+
+time = np.array([0, 1, 2, 3, 4])   # seconds
+height = np.array([0, 5, 15, 20, 10])  # meters
+
+# Average velocity = (final position - initial position) / total time
+average_velocity = (height[-1] - height[0]) / (time[-1] - time[0])
+
+print("Average Velocity:", average_velocity, "m/s")
