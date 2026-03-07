@@ -1,0 +1,12 @@
+import pandas as pd
+from sklearn.cluster import KMeans
+import matplotlib.pyplot as plt
+
+data = {'Spend':[100,200,300,400,500],'Items':[1,3,5,7,9]}
+df = pd.DataFrame(data)
+
+k = KMeans(n_clusters=2)
+df['Cluster'] = k.fit_predict(df)
+
+plt.scatter(df['Spend'], df['Items'], c=df['Cluster'])
+plt.show()
