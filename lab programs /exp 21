@@ -1,0 +1,9 @@
+from sklearn.neighbors import KNeighborsClassifier
+
+X=[[150,0,0],[160,1,1],[120,2,0]]   # weight, color, texture
+y=["apple","orange","banana"]
+
+model=KNeighborsClassifier(n_neighbors=3)
+model.fit(X,y)
+
+print(model.predict([[140,1,0]]))
